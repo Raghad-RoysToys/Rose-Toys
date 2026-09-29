@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products | Rose Toys</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+    <img src="images/logo/logo.png" alt="Rose Toys">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">products</a>
+            <a href="offers.html">offers</a>
+            <a href="about.html">about us</a>
+            <a href="contact.html">contact</a>
+            <a href="account.html">account</a>
+        </nav>
+        </header>
+
+<main>
+    <h1 class="products-title">Our Toys</h1>
+    <section class="products">
+        <div class="product">
+            <img src="images/products/teddy-bear.jpg" alt="Teddy Bear">
+            <h3>Teddy Bear</h3>
+            <p class="price">$15</p>
+            <button onclick="openModal(this)"data-details="ajax/teddy-details.html">View Details</button>
+        </div>
+        <div class="product">
+            <img src="images/products/bunny.jpg" alt="Bunny">
+            <h3>Bunny</h3>
+            <P class="price">$12</P>
+            <button onclick="openModal(this)"data-details="ajax/bunny-details.html">View Details</button>
+        </div>
+        <div class="product">
+            <img src="images/products/blocks.jpg" alt="Blocks">
+            <h3>Blocks</h3>
+            <P class="price">$10</P>
+            <button onclick="openModal(this)"data-details="ajax/blocks-details.html">View Details</button>
+        </div>
+        <div class="product">
+    <img src="images/products/doll-house.jpg" alt="Doll House">
+    <h3>Doll House</h3>
+    <p class="price">$25</p>
+    <button onclick="openModal(this)"data-details="ajax/doll-house-details.html">View Details</button>
+</div>
+
+<div class="product">
+    <img src="images/products/kitchen-set.jpg" alt="Kitchen Set">
+    <h3>Kitchen Set</h3>
+    <p class="price">$20</p>
+    <button onclick="openModal(this)"data-details="ajax/kitchen-set-details.html">View Details</button>
+</div>
+
+<div class="product">
+    <img src="images/products/makeup-set.jpg" alt="Makeup Set">
+    <h3>Makeup Set</h3>
+    <p class="price">$18</p>
+    <button onclick="openModal(this)"data-details="ajax/makeup-set-details.html">View Details</button>
+</div>
+
+<div class="product">
+    <img src="images/products/princess-doll.jpg" alt="Princess Doll">
+    <h3>Princess Doll</h3>
+    <p class="price">$16</p>
+    <button onclick="openModal(this)"data-details="ajax/princess-doll-details.html">View Details</button>
+</div>
+
+<div class="product">
+    <img src="images/products/unicorn.jpg" alt="Unicorn">
+    <h3>Unicorn</h3>
+    <p class="price">$14</p>
+    <button onclick="openModal(this)"data-details="ajax/unicorn-details.html">View Details</button>
+</div>
+    </section>
+    <div id="productModal" class="modal">
+    <div class="modal-content">
+        <span id="close">&times;</span>
+        <h2>Product Details</h2>
+        <p>High quality toy from Rose Toys.</p>
+    </div>
+</div>
+<!-- من هنا جافا -->
+<script>
+function openModal(button) {
+    const modal = document.getElementById("productModal");
+    const rect = button.getBoundingClientRect();
+
+    modal.style.display = "block";
+    modal.style.left = (rect.right + window.scrollX + 10) + "px";
+    modal.style.top = (rect.top + window.scrollY) +"px";
+    fetch(button.dataset.details)
+    .then(response=>response.text( ))
+    .then(data=>{
+        document.querySelector(".modal-content").innerHTML=
+        '<span id="close">&times;</span>' + data;
+    });
+}
+
+    document.addEventListener("click", function(e){
+        if (e.target.id === "close"){
+            document.getElementById("productModal").style.display = "none";
+        }
+    });
+</script>
+</body>
+</html>

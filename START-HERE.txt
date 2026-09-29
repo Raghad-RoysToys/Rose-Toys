@@ -1,0 +1,22 @@
+ROSE TOYS - STARTER PACKAGE
+
+The HTML, CSS, JavaScript and Ajax HTML files are intentionally blank.
+You will write all project code yourself.
+
+Pages:
+1. index.html      Home
+2. products.html   Products
+3. offers.html     Offers
+4. about.html      About Us
+5. contact.html    Contact Us
+6. account.html    Login / Create Account
+
+Folders:
+css/       style.css
+js/        script.js
+ajax/      two blank files for the required Ajax/Modal work
+images/    logo, slider, products, offers and about images
+videos/    ready if you later need a local video asset
+
+IMPORTANT:
+Do not rename files after you start coding, because their paths will be used in HTML/CSS/JS.

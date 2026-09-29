@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff9fb;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 3% ;
+}
+
+header img {
+width: 150px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+ nav a {
+    margin: 0;
+    text-decoration: none;
+    color: #555;
+ }
+ .modal {
+    display: none;
+    position: absolute;
+    width: 220px;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #f5e6d3;
+    padding: 10px;
+    width: 200px;
+    font-size: 12px;
+    border-radius: 10px;
+    color: #c94f75;
+}
+
+.modal-content h2 {
+    font-size: 14px;
+    margin: 3px 0;
+}
+
+.modal-content p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+#close {
+    font-size: 14px;
+    cursor: pointer;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 20px;
+}
+@media(max-width: 768px) {
+    .products{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+#toast {
+    display: none;
+}
+#toast.show {
+    display: block;
+}
+/* offers */
+table {
+    margin: 20px 0;
+    width: 450px !important;
+    border-collapse: collapse;
+    background-color: #fff7fa;
+}
+
+table th {
+    background-color: #e8a0b5;
+    color: white;
+    font-size: 14px;
+    padding: 10px 18px;
+    text-align: center;
+}
+
+table td {
+    background-color: #fff1f5;
+    color: #555;
+    font-size: 13px;
+    padding: 10px 18px;
+    text-align: center;
+    border: 1px solid #e8a0b5;
+}
+
+table th {
+    border: 1px solid #e8a0b5;
+}
+.offer-title {
+    color: #c94f75;
+    background-color: #fff1f5;
+    width: fit-content;
+    padding: 8px 18px;
+    border-left:5px solid #e8a0b5;
+    border-radius: 8px;
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+/* home */
+.welcome {
+    text-align: center;
+    background-color: #fff1f5;
+    padding: 25px;
+    margin: 25px auto;
+    width: 80%;
+    border-radius: 15px;
+}
+.welcome h1 {
+    color: #c94f75;
+    font-size: 28px;
+    margin: 5px;
+}
+.welcome p {
+    color: #555;
+    font-size: 16px;
+}
+footer{
+    background-color: #e8a0b5;
+
+}
+footer p {
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+
+}
+/* products */
+.products-title {
+    text-align: center;
+    color: #c94f75;
+    font-size: 30px;
+    margin: 25px 0;
+}
+.products h3 {
+    color: #c94f75;   
+}
+.price {
+    color: #555;
+    font-weight: bold;
+}
+.products button {
+    background-color: #e8a0b5;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* offers */
+.offers-title {
+    text-align: center;
+    color: #c94f75;
+    font-size: 30px;
+}
+section.offers {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+section.offers img{
+    width: 400px;
+    max-width: 100%;
+}
+/* About Us */
+
+.about {
+    width: 80%;
+    margin: 30px 0;
+    background-color: #fff7fa;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.about h1 {
+    text-align: left;
+    color: #c94f75;
+    font-size: 30px;
+}
+
+.about p {
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+}
+
+.about h2 {
+    color: #c94f75;
+    font-size: 24px;
+}
+
+.about li {
+    color: #555;
+    margin: 8px;
+}
+/* contact  */
+.contact {
+    width: 450px;
+    margin: 30px 0;
+    background-color: #fff7fa;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.contact h1 {
+    color: #c94f75;
+    text-align: center;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 12px;
+}
+
+.contact button {
+    background-color: #e8a0b5;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+/* account  */
+.account {
+    width: 450px;
+    margin: 30px 0;
+    background-color: #fff7fa;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.account h1,
+.account h2 {
+    color: #c94f75;
+}
+
+.account input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 12px;
+}
+
+.account button {
+    background-color: #e8a0b5;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+#wowslider-container1 {
+    width: 1000px !important;
+    max-width: 100% !important;
+    margin: auto !important;
+}

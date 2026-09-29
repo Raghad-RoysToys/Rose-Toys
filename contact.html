@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conract | Rose Toys</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+    <img src="images/logo/logo.png" alt="Rose Toys">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">products</a>
+            <a href="offers.html">offers</a>
+            <a href="about.html">about us</a>
+            <a href="contact.html">contact</a>
+            <a href="account.html">account</a>
+        </nav>
+        </header>
+        <main class="contact">
+            <h1>Contact Us</h1>
+            <p><i class="fa-solid fa-envelope"></i>rose.toys@email.com</p>
+            <p><i class="fa-solid fa-phone"></i>+967 771931972</p>
+            <form>
+                <label>Name:</label>
+                <input type="text" required>
+
+                <label>Email:</label>
+                <input type="email" required>
+                
+                <label>Message:</label>
+                <textarea required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div id="toast">Message sent successfully!</div>
+        </main>
+        <script>
+const form = document.querySelector("form");
+const toast = document.getElementById("toast");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    form.reset();
+    toast.style.display = "block";
+
+    setTimeout(function() {
+        toast.style.display = "none";
+    }, 1000);
+});
+</script>
+</body>
+</html>
